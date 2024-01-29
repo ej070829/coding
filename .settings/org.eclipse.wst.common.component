@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="PmiProgrammers">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/PmiProgrammers/src/main/java"/>
+        <property name="context-root" value="PmiProgrammers"/>
+        <property name="java-output-path" value="/PmiProgrammers/PmiProgrammers/target/classes"/>
+    </wb-module>
+</project-modules>
