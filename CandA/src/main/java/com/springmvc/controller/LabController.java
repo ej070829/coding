@@ -54,7 +54,7 @@ public class LabController {
 	
 	@ModelAttribute
 	public void addAttributes(Model model) {
-		model.addAttribute("addTitle", "╫е╠т га╥на╖ф╝ ╣Н╥о");
+		model.addAttribute("addTitle", "Л▀═Й╥°К▐└Л└°К⌠╠К║²");
 	}
 	
 	@InitBinder
