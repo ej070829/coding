@@ -40,6 +40,15 @@ public class LabController {
 		
 		return "lab";
 	}
+	@PostMapping("/lab")
+	public String submitModifyNewLab(@ModelAttribute("modifyLab")Lab lab) {
+		labService.setNewLab(lab);
+		return "redirect:/labs";
+	}
+	@ModelAttribute("name")
+	public void modifyAttributes(Model model) {
+		model.addAttribute("modifyTitle", "수정 프로젝트 내용");
+	}
 	
 	@GetMapping("/add")
 	public String requestAddLabForm(@ModelAttribute("NewLab")Lab lab) {
@@ -47,14 +56,14 @@ public class LabController {
 	}
 	
 	@PostMapping("/add")
-	public String submitAddNewBook(@ModelAttribute("NewLab")Lab lab) {
+	public String submitAddNewLab(@ModelAttribute("NewLab")Lab lab) {
 		labService.setNewLab(lab);
 		return "redirect:/labs";
 	}
 	
 	@ModelAttribute
 	public void addAttributes(Model model) {
-		model.addAttribute("addTitle", "신규도서등록");
+		model.addAttribute("addTitle", "신규 프로젝트 내용");
 	}
 	
 	@InitBinder

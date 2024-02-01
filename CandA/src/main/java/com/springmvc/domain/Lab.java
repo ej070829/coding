@@ -1,8 +1,8 @@
 package com.springmvc.domain;
 
 public class Lab {
-	private String name; //ÇÁ·ÎÁ§Æ® ÀÌ¸§
-	private String content; // ÇÁ·ÎÁ§Æ® »ó¼¼ ³»¿ë
+	private String name; //í”„ë¡œì íŠ¸ ì´ë¦„
+	private String content; // í”„ë¡œì íŠ¸ ìƒì„¸ ë‚´ìš©
 	
 	public String getName() {
 		return name;

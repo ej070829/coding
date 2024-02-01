@@ -11,17 +11,17 @@ public class LabRepositoryImpl implements LabRepository {
 	private List<Lab> listOfLabs = new ArrayList<Lab>();
 	
 	public LabRepositoryImpl() {
-		Lab lab1 = new Lab("1¹ø ÇÁ·ÎÁ§Æ®");
-		lab1.setContent("11111ÀÌ°Å´Â ¾î¶»°Ô µÇ°í Àú·¸°Ô µÇ°í ¾îÂ¼°íÀúÂ¼°í »ó¼¼¼³¸í ÀûÀ» ¼ö ÀÖ´Â°ø°£");
+		Lab lab1 = new Lab("1ë²ˆ í”„ë¡œì íŠ¸");
+		lab1.setContent("11111ì´ê±°ëŠ” ì–´ë–»ê²Œ ë˜ê³  ì €ë ‡ê²Œ ë˜ê³  ì–´ì©Œê³ ì €ì©Œê³  ìƒì„¸ì„¤ëª… ì ì„ ìˆ˜ ìˆëŠ”ê³µê°„");
 		
-		Lab lab2 = new Lab("2¹ø ÇÁ·ÎÁ§Æ®");
-		lab2.setContent("222222ÀÌ°Å´Â ¾î¶»°Ô µÇ°í Àú·¸°Ô µÇ°í ¾îÂ¼°íÀúÂ¼°í »ó¼¼¼³¸í ÀûÀ» ¼ö ÀÖ´Â°ø°£");
+		Lab lab2 = new Lab("2ë²ˆ í”„ë¡œì íŠ¸");
+		lab2.setContent("222222ì´ê±°ëŠ” ì–´ë–»ê²Œ ë˜ê³  ì €ë ‡ê²Œ ë˜ê³  ì–´ì©Œê³ ì €ì©Œê³  ìƒì„¸ì„¤ëª… ì ì„ ìˆ˜ ìˆëŠ”ê³µê°„");
 
-		Lab lab3 = new Lab("3¹ø ÇÁ·ÎÁ§Æ®");
-		lab3.setContent("3333ÀÌ°Å´Â ¾î¶»°Ô µÇ°í Àú·¸°Ô µÇ°í ¾îÂ¼°íÀúÂ¼°í »ó¼¼¼³¸í ÀûÀ» ¼ö ÀÖ´Â°ø°£");
+		Lab lab3 = new Lab("3ë²ˆ í”„ë¡œì íŠ¸");
+		lab3.setContent("3333ì´ê±°ëŠ” ì–´ë–»ê²Œ ë˜ê³  ì €ë ‡ê²Œ ë˜ê³  ì–´ì©Œê³ ì €ì©Œê³  ìƒì„¸ì„¤ëª… ì ì„ ìˆ˜ ìˆëŠ”ê³µê°„");
 
-		Lab lab4 = new Lab("4¹ø ÇÁ·ÎÁ§Æ®");
-		lab1.setContent("4444444ÀÌ°Å´Â ¾î¶»°Ô µÇ°í Àú·¸°Ô µÇ°í ¾îÂ¼°íÀúÂ¼°í »ó¼¼¼³¸í ÀûÀ» ¼ö ÀÖ´Â°ø°£");
+		Lab lab4 = new Lab("4ë²ˆ í”„ë¡œì íŠ¸");
+		lab1.setContent("4444444ì´ê±°ëŠ” ì–´ë–»ê²Œ ë˜ê³  ì €ë ‡ê²Œ ë˜ê³  ì–´ì©Œê³ ì €ì©Œê³  ìƒì„¸ì„¤ëª… ì ì„ ìˆ˜ ìˆëŠ”ê³µê°„");
 		
 		listOfLabs.add(lab1);
 		listOfLabs.add(lab2);
@@ -47,7 +47,7 @@ public class LabRepositoryImpl implements LabRepository {
 			}
 		}
 		if(labInfo==null) {
-			throw new IllegalArgumentException("ÇØ´ç ÇÁ·ÎÁ§Æ®¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+			throw new IllegalArgumentException("í•´ë‹¹ í”„ë¡œì íŠ¸ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		return labInfo;
 	}
