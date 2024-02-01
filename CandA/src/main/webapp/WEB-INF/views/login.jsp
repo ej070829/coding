@@ -9,7 +9,7 @@
 <body>
 	<nav class="nav">
         <!-- nav 바에서 Main으로 이동하는 부분 -->
-        <a class="nav-content" href="./home">Home</a>
+        <a class="nav-content" href="./labs">Home</a>
         
         <p class="border-left"> </p>
         

@@ -9,17 +9,17 @@
 	 http://www.springframework.org/schema/security/spring-security.xsd">
 	 
 	 <http use-expressions="true">
-	 	<intercept-url pattern="/books/add" access="hasAuthority('ROLE_ADMIN')"/>
+	 	<intercept-url pattern="/labs/add" access="hasAuthority('ROLE_ADMIN')"/>
 	 	<!-- default-target-url 부분에 관리자 페이지로 연결되도록 url 연결 -->
 	 	<form-login login-page="/login"
-                    default-target-url="/home"
+                    default-target-url="/labs/add"
                     authentication-failure-url="/loginfailed"  
                     username-parameter="username"  
                     password-parameter="password"/>
 	 	
 	 	<form-login />
 	 	<csrf/>
-	 	<logout/>
+	 	<logout logout-success-url="/logout"/>
 	 </http>
 	 
 	 <authentication-manager>

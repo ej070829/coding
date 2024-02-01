@@ -5,13 +5,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="./resources/css/main.css" rel="stylesheet">
+    <link href="<%= request.getContextPath() %>/resources/css/lab.css" rel="stylesheet">
     <title>CandAProject</title>
 </head>
 <body>
-    <nav class="nav">
+	<nav class="nav">
         <!-- nav 바에서 Main으로 이동하는 부분 -->
-        <a class="nav-content" href="./home">Home</a>
+        <a class="nav-content" href="./">Home</a>
         
         <p class="border-left"> </p>
         
@@ -26,26 +26,14 @@
         <!-- 로그인 페이지로 이동하는 부분 -->
         <a class="nav-content" href="./login">로그인</a>
     </nav>
-    <div class="container container-column">
-        <div class="main-title">
-            <h1>MainPage 입니다.!</h1>
-        </div>
-        <div class="container">
-        	<div class="main-items">
-        		<c:forEach items="${ProjectList}" var="project">
-        			<a class="project-Box main-data" href="#">
-        				<p class="project-name">${project.name}</p>
-        				<p class="project-content">${fn:substring(project.content, 0, 100)}</p>
-            	    </a>
-        		</c:forEach>
-        		
-        	</div>
-        </div>
-        
-        	
-                
-            
-        
+    
+    <div>
+    	<img>
+    	<div>
+    		<div class="lab-title">${Lab.name}</div>
+    		<div class="lab-content">${Lab.content}</div>
+    	</div>
+    
     </div>
 </body>
 </html>

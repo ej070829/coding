@@ -1,6 +1,6 @@
 package com.springmvc.domain;
 
-public class Project {
+public class Lab {
 	private String name; //프로젝트 이름
 	private String content; // 프로젝트 상세 내용
 	
@@ -20,12 +20,12 @@ public class Project {
 		this.content = content;
 	}
 
-	public Project(String name) {
+	public Lab(String name) {
 		super();
 		this.name = name;
 	}
 
-	public Project() {
+	public Lab() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
