@@ -4,7 +4,7 @@
 <head>
 <link rel="shortcut icon" href="#">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>A + B</title>
 <style>
 	#editor {
 		height: 800px !important;
@@ -13,14 +13,14 @@
 	
 	#desc {
 		height: 800px;
-		font-size: 40px;
+		font-size: 30px;
 	}
 </style>
 </head>
 <body>
  	<div style="display:flex;">
  		<div style="flex:0 0 30%;">
- 			<div id="desc">
+ 			<div id="desc" style="overflow-y: auto">
  				<b>문제 설명</b><br>
  				<br>
 				<b>두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.</b><br>
@@ -43,11 +43,11 @@
  		</div>
  		<div style="flex:0 0 70%;">
  			<div id="editor"></div>
-			<div style="display:flex; margin-top:20px;">
+			<div style="display:flex; margin-top:20px; font-size:20px">
 				<div>출력:</div>
-				<div id="OUTPUT" style="flex:1 1 auto; padding-left:10px;">실행 결과가 여기에 표시됩니다.</div>
+				<div id="OUTPUT" style="flex:1 1 auto; padding-left:10px;white-space:pre">실행 결과가 여기에 표시됩니다.</div>
 			</div>
-			<div style="display:flex; margin-top:20px;">
+			<div style="display:flex; margin-top:20px; font-size:20px">
 				<div>결과:</div>
 				<div id="OUTPUT2" style="flex:1 1 auto; padding-left:10px;"></div>
 			</div>
@@ -75,21 +75,25 @@
 	    function send_compiler() {
 	       code = getEditorValue();
 	       console.log(code);
+	       var arr1 = ["1\n2","42\n520","8\n65","2024\n222"];
+	       var arr2 = ["3","562","73","2246"];
 	       $.ajax({
 	          type: "POST",
 	          url: "http://localhost:8080/controler/postman",
-	          data : JSON.stringify({"lang":"python","code":code,"input":["1\n2"]}),
+	          data : JSON.stringify({"lang":"python","code":code,"input":arr1}),
 	          dataType: "json",
 	          contentType: 'application/json; charset=utf-8',
 	          success: function(data,status) {
 	             console.log("status: ", status);
-	             console.log("data: ",data["output"][0]);
+	             console.log("data: ",data["output"]);
 	               
 	               // 응답 값 출력
-	             answer = '오답'
-	             output=data["output"][0];              
-	             if(output == "3"){
-	            	 answer = '정답'
+	             answer = "정답";
+	             output=data["output"];              
+	             for(var i=0; i<arr2.length; i++){
+	             	if(output[i][0] != arr2[i]){
+	            	 	answer = "오답";
+	             	}
 	             }
 	             document.getElementById("OUTPUT").innerHTML = output;     
 	             document.getElementById("OUTPUT2").innerHTML = answer;

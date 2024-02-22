@@ -38,7 +38,7 @@ public class HomeController {
 	}
 	@GetMapping("/compile")
 	   public String compile() {
-	      return "NewFile";   
+	      return "NewFile1";   
 	   }
 	@GetMapping("/compile2")
 	   public String compile2() {
